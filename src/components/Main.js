@@ -26,7 +26,7 @@ window.Y = Y
 const y = new Y('realtime-aframe', {
   connector: {
     name: 'websockets-client',
-    url: 'http://127.0.0.1:1234'
+    url: 'https://y-websockets-server-uvuvjfqdob.now.sh'
   }
 })
 const yscene = y.define('scene', Y.XmlFragment)
