@@ -29,7 +29,9 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-file-reader-input": "^1.1.4",
-    "react-select": "^1.0.0-rc.1"
+    "react-select": "^1.0.0-rc.1",
+    "y-websockets-client": "^9.0.0-1",
+    "yjs": "^13.0.0-51"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
