@@ -27,7 +27,9 @@
     "lodash.debounce": "^4.0.6",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-select": "^1.0.0-rc.1"
+    "react-select": "^1.0.0-rc.1",
+    "y-websockets-client": "^9.0.0-3",
+    "yjs": "^13.0.0-51"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",

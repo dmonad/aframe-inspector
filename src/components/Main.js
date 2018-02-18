@@ -17,6 +17,31 @@ import {injectCSS, injectJS} from '../lib/utils';
 
 import '../css/main.css';
 
+import Y from 'yjs'
+import extendYwebsockets from 'y-websockets-client'
+
+extendYwebsockets(Y)
+window.Y = Y
+
+const y = new Y('realtime-aframe', {
+  connector: {
+    name: 'websockets-client',
+    url: 'http://127.0.0.1:1234'
+  }
+})
+const yscene = y.define('scene', Y.XmlFragment)
+
+window.onload = function () {
+  const domScene = document.querySelector('a-scene')
+  y.when('synced').then(function () {
+    debugger
+    if (yscene.length === 0) {
+      yscene.insertDomElements(0, Array.from(domScene.children))
+    }
+    yscene.bindToDom(domScene)
+  })
+}
+
 // Megahack to include font-awesome.
 injectCSS('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 injectCSS('https://fonts.googleapis.com/css?family=Roboto:400,300,500');

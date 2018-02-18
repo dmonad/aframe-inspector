@@ -7,6 +7,10 @@
   </head>
   <body>
     <a-scene debug="true">
+      <a-entity id="blueBox" mixin="blueBox" position="0 8 0"></a-entity>
+    </a-scene>
+    <!--
+    <a-scene debug="true">
       <a-assets>
         <a-mixin id="blue" material="color: #4CC3D9"></a-mixin>
         <a-mixin id="blueBox" geometry="primitive: box; depth: 2; height: 5; width: 1" material="color: #4CC3D9"></a-mixin>
@@ -21,7 +25,6 @@
         <img id="floorImg" src="https://aframe.io/sample-assets/assets/images/terrain/grasslight-big.jpg" crossOrigin="true">
       </a-assets>
 
-      <!-- Meshes. -->
       <a-entity id="blueBox" mixin="blueBox" position="0 8 0"></a-entity>
       <a-entity id="shortOrangeBox" mixin="short orange box" position="-5 2 0"></a-entity>
       <a-entity id="shortYellowBox" mixin="short yellow box" position="5 2 0"></a-entity>
@@ -32,21 +35,16 @@
       <a-box src="https://aframe.io/sample-assets/assets/images/bricks/brick_bump.jpg" position="-5 5 -2" width="1" color="#F16745"></a-box>
       <a-box id="box" position="0 2 0" height="2" color="#FFC65D"></a-box>
 
-      <!-- Models. -->
       <a-entity geometry="primitive: box" material="src: #crateImg" position="3 4 0"></a-entity>
       <a-entity geometry="primitive: box" material="color: #0f0" position="4 2 4"></a-entity>
 
-      <!-- Floor. -->
       <a-entity id="floor" geometry="primitive: cylinder; height: .2; radius: 12"
                 material="src: #floorImg; color: #fafafa; metalness: .2; repeat: 50 20; roughness: .1"></a-entity>
 
-      <!-- Lights. -->
       <a-entity id="pointLight" light="type: point" position="0 3 3"></a-entity>
 
-      <!-- Camera. -->
       <a-entity id="cameraWrapper" position="0 1 8">
         <a-entity id="camera" camera look-controls wasd-controls>
-          <!-- Cursor. -->
           <a-entity id="cursor" position="0 0 -2"
                     geometry="primitive: ring; radiusOuter: 0.016; radiusInner: 0.01"
                     material="color: #ff9; shader: flat; transparent: true; opacity: 0.5"
@@ -57,7 +55,7 @@
 
       <a-sky color="#3c3c3c"></a-sky>
     </a-scene>
-
+    -->
     <script src="../dist/aframe-inspector.js"></script>
 
     <!-- Github Corner. -->
